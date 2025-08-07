@@ -1,0 +1,39 @@
+# — ไฟล์บิวด์และไบนารี
+*.class
+*.o
+*.exe
+*.dll
+*.so
+
+# — ไฟล์สำรองและอาร์ไคฟ์
+*.log
+*.tmp
+*.zip
+*.tar
+*.gz
+
+# — โฟลเดอร์ dependencies
+node_modules/
+vendor/
+venv/
+.venv/
+build/
+dist/
+
+# — ไฟล์ Environment / เซ็นเซทีฟ
+.env*
+*.key
+*.pem
+
+# — ไฟล์ระบบปฏิบัติการ
+.DS_Store
+Thumbs.db
+
+# — ไฟล์หรือโฟลเดอร์ IDE หรือ editor
+.vscode/
+.idea/
+*.suo
+*.user
+
+# — ตัวอย่างการยกเว้น
+# !important.log      # หากต้องการ track file ที่เป็น exception
