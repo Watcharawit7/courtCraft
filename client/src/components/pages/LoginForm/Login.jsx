@@ -25,8 +25,12 @@ const Login = () => {
                 </Button>
               </div>
             </Form>
-            <div className="text-center mt-3">
+            {/* <div className="text-center mt-3">
               <a href="#">Forgot password?</a>
+            </div> */}
+            <div className="text-center mt-2">
+              <span>Don't have an account? </span>
+              <a href="/register">Register</a>
             </div>
           </div>
         </Col>
