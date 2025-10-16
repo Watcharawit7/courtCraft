@@ -1,13 +1,20 @@
-const express = require('express')
-require('dotenv').config()
 
-const app = express()
-const PORT = process.env.PORT
+import "dotenv/config.js";
 
-app.get('/', (req, res) => {
-  res.send('Hello, Express from server!')
-})
+import authRoutes from "./routes/auth.js";
+import './routes/booking.js'
+import { connectDB } from "./config/db.js";
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`)
-})
+import app from './config/app.js';
+const {PORT} = process.env;
+
+// Routes
+app.use("/api/auth", authRoutes);
+
+//check server
+app.get('/', (req, res) => res.status(200).send('server are ready!!'))
+
+// Start
+connectDB().then(() => {
+  app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+});
