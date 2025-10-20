@@ -1,6 +1,8 @@
 import { BrowserRouter } from 'react-router-dom'
-
 import Layout from './components/pages/Layout/Layout'
+
+import './index.css';
+
 const App = () => {
   return (
     <>
